@@ -6,35 +6,41 @@
     <title>darknav-project</title>
     <link rel="stylesheet" href="styles/index.css">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700,900&display=swap" rel="stylesheet">
 </head>
 <body class="screen">
-    <header>
-        <ul class="navlist" id="darknavlist">
-            <p class="navlist__logo" >Head</p>
-            <li class="navlist__works"><a href="#works" class="active">Works</a></li>
-            <li class="navlist__services"><a href="#services">Services</a></li>
-            <li class="navlist__contact"><a href="#contact">Contact</a></li>
-        </ul>
-    </header>
-    <main>
-        <div>
-            <h1>Musician</h1>
-            <h4>Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec 
-                viverra eleifend lacus, vitae ullamcor.</h4>
-        </div>
-        <img src="images/downarrow.svg" class="downarrow">
-        <img src="images/Slider.png" class="photo"
-    </main>
- 
-<script>
+    <div class="pagewrapper">
+        <main class ="main">
+            <nav class="nav">
+                <div class="nav__logo">Head.</div>
+                <ul class="nav__list" id="darknavlist">
+                    <li class="nav__list__works"><a href="#works" class="active">Works</a></li>
+                    <li class="nav__list__services"><a href="#services">Services</a></li>
+                    <li class="nav__list__contact"><a href="#contact">Contact</a></li>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>
+                </ul>
+            </nav>
+            <div class="title">
+                <h1 class="title--h1">Musician</h1>
+                <p class="title--content">Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec 
+                    viverra eleifend lacus, vitae ullamcor.</p>
+            </div>
+            <img src="images/downarrow.svg" class="downarrow">   
+        </main>
+        <img src="images/Slider.png" class="main__photo">
+    </div>
+    <script>
 function myFunction() {
     var x = document.getElementById("darknavlist");
-    if (x.className === "topnav") {
+    if (x.className === "navlist") {
     x.className += " responsive";
     } else {
-    x.className = "topnav";
+    x.className = "navlist";
     }
 }
 </script>   
 </body>
 </html>
+                
+            
+        
