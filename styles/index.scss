@@ -82,7 +82,8 @@
     font-size: 16px;
     line-height: 22px;
 
-    &:hover {
+    &:hover
+    &:focus {
         color:grey;
     }
 }
@@ -98,16 +99,26 @@
 @media screen and (max-width: 600px) {
     .nav__list  {
         display: none;
+    }
 
-        .icon {
-        display: block;
-    }
-    }
-    
-    .nav.icon {
+    .nav__list .icon {
         display: block;
     }
 }
+ 
+@media screen and (max-width: 600px) {
+    .nav__list.responsive {position: relative;}
+    .nav__list.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .nav__list.responsive a {
+        display: block;
+        text-align: left;
+    }
+}
+
 .title {
     width: 94%;
     height: 244px;
@@ -131,6 +142,13 @@
         font-weight: normal;
         font-size: 22px;
         line-height: 1.5;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .title__content {
+        width: 60%;
+        text-align: center;
     }
 }
 

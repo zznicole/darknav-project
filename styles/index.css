@@ -121,7 +121,7 @@
   line-height: 22px;
 }
 
-.nav__list a:hover {
+.nav__list a:hover .nav__list a:focus {
   color: grey;
 }
 
@@ -140,8 +140,20 @@
   .nav__list .icon {
     display: block;
   }
-  .nav.icon {
+}
+
+@media screen and (max-width: 600px) {
+  .nav__list.responsive {
+    position: relative;
+  }
+  .nav__list.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav__list.responsive a {
     display: block;
+    text-align: left;
   }
 }
 
