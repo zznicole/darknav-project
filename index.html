@@ -14,10 +14,12 @@
             <nav class="nav">
                 <div class="nav__logo">Head.</div>
                 <ul class="nav__list" id="darknavlist">
-                    <li class="nav__list__works"><a href="#works" class="active">Works</a></li>
-                    <li class="nav__list__services"><a href="#services">Services</a></li>
-                    <li class="nav__list__contact"><a href="#contact">Contact</a></li>
-                    <a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>
+                    <li class="nav__list--works"><a href="#works" class="active">Works</a></li>
+                    <li class="nav__list--ervices"><a href="#services">Services</a></li>
+                    <li class="nav__list--contact"><a href="#contact">Contact</a></li>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
                 </ul>
             </nav>
             <div class="title">
@@ -27,9 +29,9 @@
             </div>
             <img src="images/downarrow.svg" class="downarrow">   
         </main>
-        <img src="images/Slider.png" class="main__photo">
+        <img src="images/Slider.png" class="photo">
     </div>
-    <script>
+<script>
 function myFunction() {
     var x = document.getElementById("darknavlist");
     if (x.className === "navlist") {
