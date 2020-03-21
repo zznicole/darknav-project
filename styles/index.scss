@@ -14,7 +14,6 @@
 .pagewrapper {
     width:80%;
     max-width: 1167px;
-    height: 690px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -22,6 +21,7 @@
 
 @media screen and (max-width: 800px) {
     .pagewrapper {
+
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
@@ -46,6 +46,7 @@
 .nav {
     width: 100%;
     height: 98px;
+    padding-top: 3em;
     color: $font-color;
     display: flex;
     justify-content: space-between;
@@ -68,7 +69,7 @@
 
 @media screen and (max-width: 800px)  and (min-width: 400px) {
     .nav {
-        width: 617px; 
+        max-width: 617px; 
     }
 } 
 
@@ -82,8 +83,7 @@
     font-size: 16px;
     line-height: 22px;
 
-    &:hover
-    &:focus {
+    &:hover {
         color:grey;
     }
 }
@@ -92,27 +92,31 @@
     list-style-type: none;
 }
 
-.nav__list .icon {
+.nav .icon {
     display: none;
-}
-
-@media screen and (max-width: 600px) {
-    .nav__list  {
-        display: none;
-    }
-
-    .nav__list .icon {
-        display: block;
-    }
 }
  
 @media screen and (max-width: 600px) {
-    .nav__list.responsive {position: relative;}
-    .nav__list.responsive .icon {
+    .nav__list a {
+        display: none
+    }
+    .nav .icon {
+        display: block;
+        color:  #fff;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .nav__list.responsive {
+        position: relative;
+    }
+
+    .nav.responsive .icon {
         position: absolute;
         right: 0;
         top: 0;
     }
+
     .nav__list.responsive a {
         display: block;
         text-align: left;
@@ -145,13 +149,6 @@
     }
 }
 
-@media screen and (max-width: 600px) {
-    .title__content {
-        width: 60%;
-        text-align: center;
-    }
-}
-
 @media screen and (max-width: 800px) {
     .title {
         width: 574px;
@@ -159,16 +156,33 @@
     }
 }
 
+@media screen and (max-width: 600px) {
+    .title__content {
+        width: 60%;
+        text-align: center;
+    }
+}
+
+
+
 .downarrow {
     padding: 1rem;
     border: 1px solid $bg-color;
+    
+    &:hover {
+        border: 1px solid grey;
+        transform: scale(1.1);
+        transition: 3s easy-in-out; 
+    }
 }
 
-.downarrow:hover {
-    border: 1px solid grey;
-    transform: scale(1.1);
-    transition: 3s easy-in-out; 
+@media screen and (max-width: 600px) {
+    .downarrow {
+        display: none;
+    }
 }
+
+
 
 
 
